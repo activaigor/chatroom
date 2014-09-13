@@ -21,7 +21,7 @@ import tornado.web
 
 from tornado.options import define, options
 
-define("port", default=8888, help="run on the given port", type=int)
+define("port", default=80, help="run on the given port", type=int)
 
 
 class MainHandler(tornado.web.RequestHandler):
