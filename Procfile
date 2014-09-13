@@ -1,1 +1,1 @@
-web: python main.py --port=5000
+web: python main.py
