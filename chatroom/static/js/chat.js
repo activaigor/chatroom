@@ -1,9 +1,11 @@
 var ws;
+var host = location.origin.replace(/^http/, 'ws') + 'chat';
 
 $(document).ready(function(){
+	alert(host);
 
 	function create_ws() {
-		ws = new WebSocket("ws://afternoon-chamber-5695.herokuapp.com:5000/chat");
+		ws = new WebSocket(host);
 
 		ws.onopen = function(e) {
 			send_message('hello', 'hello');
