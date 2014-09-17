@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Вход в систему{% end %}
+
+{% block js%}
+<script type="text/javascript">
+$(document).ready(function(){
+	$(function(){
+		$("input[name$='user']").Watermark('Имя пользователя');
+	});
+	$("input[name$='ok']").click(function(){
+		user = $("input[name$='user']").val();
+		passwd = $("input[name$='passwd']").val();
+		if (user == 'Имя пользователя' || passwd == '') {
+			alert('Заполните форму');
+			return false;
+		}
+	});
+})
+</script>
+{% end %}
+
+{% block login_status %}
+<span>Вы не вошли в систему</span>
+{% end %}
+
+{% block content %}
+	<div id="signin" class="form">
+		<form method="post">
+			<div class="input_form">
+				<input type="text" name="user" value="" />
+			</div>
+			<div class="input_form">
+				<input type="password" name="passwd" value="" />
+			</div>
+			<div class="submit_form">
+				<input type="submit" name="ok" value="ok" />
+				<input type="submit" name="signup" value="signup" />
+			</div>
+		</form>
+	</div>
+	{% if success == False %}
+		<p class="warning">Ошибка аутентификации</p>
+	{% end %}
+{% end %}

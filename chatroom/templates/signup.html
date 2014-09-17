@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Регистрация{% end %}
+
+{% block js%}
+<script type="text/javascript">
+$(document).ready(function(){
+	$(function(){
+		$("input[name$='user']").Watermark('Имя пользователя');
+		$("input[name$='passwd']").Watermark('');
+	});
+	$("input[name$='register']").click(function(){
+		user = $("input[name$='user']").val();
+		passwd = $("input[name$='passwd']").val();
+		if (user == 'Имя пользователя' || passwd == '') {
+			alert('Заполните форму');
+			return false;
+		}
+	});
+})
+</script>
+{% end %}
+
+{% block login_status %}
+<span>Регистрация нового пользователя</span>
+{% end %}
+
+{% block content %}
+
+	{% if success == True %}
+		<p class="success">Регистрация завершена успешно</p>
+		<script type="text/javascript">
+			<!--
+			setTimeout("location.href = '/signin';",1500);
+			-->
+		</script>
+	{% else %}
+		
+		<div id="signin" class="form">
+			<form method="post">
+				<div class="input_form">
+					<input type="text" name="user" value="" />
+				</div>
+				<div class="input_form">
+					<input type="password" name="passwd" value="" />
+				</div>
+				<div class="submit_form">
+					<input type="submit" name="register" value="register" />
+				</div>
+			</form>
+		</div>
+		
+		{% if success == False %}
+		<p class="warning">Данное имя пользователя уже занято</p>
+		{% end %}
+		
+	{% end %}
+
+{% end %}

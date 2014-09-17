@@ -1,0 +1,827 @@
+body {
+	background: #FFF;
+	color:#333;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 14px;
+	font-weight:300;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	padding: 0px;
+	margin: 0px;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+input {
+	margin: 2px;
+}
+
+#upper_bar {
+	margin: 0px;
+	padding: 0px;
+	background: #464679;
+	color: #F9F9F9;
+	width: 100%;
+	height: 25px;
+}
+
+#upper_bar span {
+	margin-left: 10px;
+}
+
+#signin {
+	border: 5px solid #EFEFEF;
+	width: 200px;
+	margin: 0px auto;
+	margin-top: 10px;
+	text-align: center;
+	padding: 10px;
+}
+
+#signin .input_form input {
+	width: 150px;
+}
+
+#signin .submit_form input {
+	margin-top: 10px;
+}
+
+.warning {
+	background: #F08080;
+	color: #363636;
+	border: 1px solid #A52A2A;
+	padding: 3px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.success {
+	background: #90EE90;
+	color: #363636;
+	border: 1px solid #32CD32;
+	padding: 3px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#room_search {
+	margin: 10px;
+}
+
+#room_search input[type=text] {
+	width: 400px;
+	font-size: 18px;
+	height: 30px;
+	line-height: 25px;
+	padding: 5px;
+}
+
+#room_list {
+	margin: 10px;
+}
+
+#room_add {
+	display: inline;
+	line-height: 60px;
+	text-align: center;
+}
+
+#room_add a {
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	text-decoration: none;
+	width: 60px;
+	height: 60px;
+	background: #666699;
+	float: left;
+	margin-right: 5px;
+}
+
+#room_add input {
+	width: 220px;
+	font-size: 18px;
+	height: 30px;
+	line-height: 25px;
+	padding: 5px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 7px;
+	margin-right: 10px;
+}
+
+.room {
+	float: left;
+	margin-right: 5px;
+}
+
+.room a {
+	display: inline-block;
+	margin: 0px;
+	color: white;
+	line-height: 60px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 25px;
+	text-decoration: none;
+	text-align: center;
+	background: #666699;
+}
+
+#chat_area {
+	height: 330px;
+	width: 100%;
+	margin: 10px;
+	font-size: 16px;
+}
+
+#chat_window {
+	width: 70%;
+	height: 300px;
+	float: left;
+	border: 5px solid #EFEFEF;
+	padding: 10px;
+	overflow: auto;
+}
+
+#chat_window img {
+	margin-right: 5px;
+}
+
+#users_online {
+	float: left;
+	height: 300px;
+	width: 100px;
+	padding: 10px;
+	border: 5px solid #EFEFEF;
+}
+
+#users_online ul {
+	list-style: none;
+}
+
+#users_online ul li {
+	background: #666699;
+	margin-bottom: 5px;
+}
+
+#users_online ul li span {
+	display: block;
+	background: white;
+	margin-left: 10px;
+	padding-left: 5px;
+}
+
+#msg_area input {
+	width: 400px;
+	font-size: 18px;
+	height: 30px;
+	line-height: 25px;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+#msg_area #message_send {
+	display: inline-block;
+	margin: 0px;
+	color: white;
+	line-height: 46px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	background: #666699;
+}
+
+#site_preview {
+	border: 1px solid #EFEFEF;
+	width: 70%;
+}
+
+#site_preview * {
+	font-size: 10px;
+	text-decoration: none;
+	color: #888;
+}
+
+#site_preview ul {
+	list-style: inside;
+}
+
+#site_preview h3 {
+	font-size: 12px;
+	border-bottom: 1px solid #EFEFEF;
+}
+
+/*
+#showLate {
+	position: absolute;
+	top: 90%;
+	left: 60.8%;
+	text-align: center;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	background: #76A9A9;
+	color: white;
+	display: block;
+	width: 36.1%;
+	padding: 7px;
+}
+
+#showLate:hover {
+	background: #568989;
+}
+
+#showDisturb {
+	position: absolute;
+	top: 94%;
+	left: 60.8%;
+	text-align: center;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	background: #76A9A9;
+	color: white;
+	display: block;
+	width: 36.1%;
+	padding: 7px;
+}
+
+#showDisturb:first-letter {
+	text-transform: uppercase;
+}
+
+#showDisturb:hover {
+	background: #568989;
+}
+
+#lateDiv {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	height: 568px;
+	margin-left: -350px;
+	margin-top: -275px;
+	border: 1px solid #CCC;
+	box-shadow: 3px 3px 0px grey;
+	-moz-box-shadow: 3px 3px 0px grey;
+	-webkit-box-shadow: 3px 3px 0px grey;
+}
+
+#lateDiv iframe{
+	border: none;
+	width: 700px;
+	height: 550px;
+}
+
+#distDiv {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	height: 568px;
+	margin-left: -350px;
+	margin-top: -275px;
+	border: 1px solid #CCC;
+	box-shadow: 3px 3px 0px grey;
+	-moz-box-shadow: 3px 3px 0px grey;
+	-webkit-box-shadow: 3px 3px 0px grey;
+}
+
+#distDiv iframe{
+	border: none;
+	width: 700px;
+	height: 550px;
+}
+
+#loginP strong {
+	font-weight: normal; 
+	padding: 7px; 
+	line-height: 25px;
+}
+
+#loginP a {
+	font-weight: bold;
+	color: white;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+#loginP a:hover {
+	text-decoration: underline;
+}
+
+#nameTitle a{
+	display: block;
+	background: grey;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#onlineFrame {
+	border: none; 
+	margin-top: 23px;
+}
+
+#historyFrame {
+	border: none; 
+	position: absolute; 
+	top: 30px;
+	left: 60%;
+
+}
+
+#makeReportButt {
+    display: block;
+    text-decoration: none;
+    position: fixed; 
+    top: 27px; 
+    right: 0px;
+    height: 80px;
+    width: 50px;
+    text-align: center;
+}
+
+#makeReportButt a{
+    position: relative;
+    top: 0px;
+    display: block;
+    text-decoration: none;
+    font-family: ModernPics, sans-serif;
+	background: #468989;
+    color: white;
+    font-size: 38px;
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#makeReportButt p{
+    margin: 0px;
+    display: block;
+    font-size: 10px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    color: #468989;
+}
+
+#makeReportButt a:hover {
+	background: #86B9B9;
+}
+
+#cssmenu{
+	border:none;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	font: 67.5% 'Lucida Sans Unicode', 'Bitstream Vera Sans', 'Trebuchet Unicode MS', 'Lucida Grande', Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	height: 31px;
+}
+
+#cssmenu ul{
+	height:29px;
+	list-style:none;
+	margin: 0px;
+	margin-left: 30px;
+	padding:0;
+}
+
+#cssmenu li{
+	float:left;
+	padding:0px;
+}
+#cssmenu li a {
+	background: white;
+	border-bottom: 1px dotted #333;
+	color: #333;
+	display:block;
+	font-weight:normal;
+	line-height:27px;
+	margin:0px;
+	padding:0px 27px;
+	text-align:center;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#cssmenu li a:hover, #cssmenu ul li:hover a{
+	background:#333333;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#cssmenu li ul{
+	background:#333333;
+	display:none;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	border:0px;
+	position:absolute;
+	width:225px;
+	z-index:200;
+}
+#cssmenu li:hover ul{
+	display:block;
+	
+}
+#cssmenu li li {
+	display:block;
+	float:none;
+	margin:0px;
+	padding:0px;
+	width:225px;
+}
+#cssmenu li:hover li a{
+	background:none;
+}
+#cssmenu li ul a{
+	display:block;
+	height:35px;
+	font-size:10px;
+	font-style:normal;
+	margin:0px;
+	padding:0px 10px 0px 15px;
+	text-align:left;
+}
+#cssmenu li ul a:hover, #cssmenu li ul li:hover a{
+	background: #468989;
+	border:0px;
+	color:#ffffff;
+	text-decoration:none;
+}
+#cssmenu p{
+	clear:left;
+}	
+
+#rowGrid1 {
+	background: #E0E0E0;
+}
+
+#rowGrid0 {
+	background: #F0F0F0;
+}
+
+#wav_player {
+	margin: 7px;
+	margin-left: 20px;
+	width: 460px;
+	float: left;
+}
+
+#mainLogo img {
+	position: fixed;
+	z-index: 10;
+	top: 25px;
+	left: 0px;
+	border: none;
+}
+
+#cdr td {
+	padding: 10px;
+	padding: 0px;
+	text-align: center;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#cdr .cdr_prevnext {
+	height: 40px;
+	padding: 0px;
+}
+
+#cdr .cdr_prevnext a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	color: #999;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#cdr td select {
+	width: 160px;
+}
+
+#loginBoxVisible {
+	background: #EFEFEF;
+	width: 270px;
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -135px;
+	margin-top: -100px;
+	padding: 0px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 14px;
+	z-index: 20;
+}
+
+#loginBoxVisible #loginTable {
+	width: 240px;
+	padding: 5px;
+	margin: 10px auto;
+	background: white;
+}
+
+#loginBoxVisible #loginTable td {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+}
+
+#loginBoxVisible input[type="submit"] {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+	margin-top: 10px;
+	width: 100%;
+	border: none;
+	color: white;
+	background:#333333;
+	height: 35px;
+	line-height: 35px;
+}
+
+#loginBoxVisible input[type="submit"]:hover {
+	cursor: pointer;
+	background: #468989;
+}
+
+#loginBoxVisible input[type="text"] {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+	padding: 3px;
+	border: 1px solid #C2C2C2;
+}
+
+#loginBoxVisible input[type="password"] {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+	padding: 3px;
+	border: 1px solid #C2C2C2;
+}
+
+#main_menu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 80px;
+	height: 100%;
+	background: #EDEDED;
+}
+
+#main_menu ul {
+	margin: 0px;
+	margin-top: 130px;
+	width: 80px;
+	list-style: none;
+	list-style-position: inside;
+	padding: 0px;
+}
+
+#main_menu ul li a {
+	display: block;
+	height: 80px;
+	width: 80px;
+	text-decoration: none;
+}
+
+#main_menu ul li a.unselected:hover {
+	opacity: 0.7;
+}
+
+#head_nav {
+	height: 95px;
+	margin-top: 25px;
+	margin-left: 80px;
+	border: 1px solid white;
+}
+
+#head_nav p#logo{
+	margin: 0px;
+	margin-left: 8px;
+	letter-spacing: -3px;
+	font-size: 41px;
+	color: #468989;
+	background: white;
+	padding-left: 10px;
+	width: 150px;
+}
+
+#head_nav ul#city_select {
+	margin: 0px auto;
+	list-style: none;
+	padding: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 23px;
+	height: 30px;
+	border-bottom: 1px solid #CCC;
+}
+
+#head_nav ul#city_select li {
+	float: left;
+	margin-left: 5px;
+	padding-left: 5px;
+	border-left: 3px dotted #999;
+	line-height: 12px;
+}
+
+#head_nav ul#city_select li a {
+	color: #666;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#head_nav ul#city_select li a.selected {
+	text-decoration: underline;
+}
+
+#head_nav ul#city_select li a:hover {
+	text-decoration: underline;
+}
+
+.dot_background {
+	;background: url(http://parts.blog.livedoor.jp/img/cmn/dot.gif) white repeat; 
+	background: url(http://www.neckermann.be/app/upload/css/nvb/images/common/dotBlue.gif) white repeat; 
+	opacity: 0.7;
+}
+
+#realtimeBlock {
+	margin: 0px;
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+#historyBlock {
+	margin: 0px;
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+#cdrBlock {
+	margin: 0px;
+	margin-left: 90px;
+	margin-top: 20px;
+}
+
+#loggingBlock {
+	height: 600px;
+	overflow: auto;
+	margin-left: 120px;
+	margin-right: 40px;
+	margin-top: 15px;
+	border-bottom: 30px solid #EFEFEF;
+}
+	
+.avatar {
+	width: 80px;
+	float: left;
+	height: 80px;
+	background-size:80px;
+	background-repeat:no-repeat;
+	background-position: center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	margin: 10px;
+}
+
+.avatar img {
+	margin: 10px;
+	width: 80px;
+	height: 80px;
+}
+
+#whoCall {
+	margin: 10px;
+	margin-left: 80px;
+	height: 130px;
+	width: 90%;
+}
+
+#whoCallBar {
+
+}
+
+#statusMenu {
+	border:none;
+	margin:0px;
+	padding:0px;
+	font: 67.5% 'Lucida Sans Unicode', 'Bitstream Vera Sans', 'Trebuchet Unicode MS', 'Lucida Grande', Verdana, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#statusMenu ul{
+	list-style:none;
+	margin: 0px;
+	margin-left: 0px;
+	padding:0;
+	border: none;
+}
+
+#statusMenu li{
+	float:left;
+	padding:0px;
+	margin: 0px;
+}
+#statusMenu li a {
+	display:block;
+	margin-bottom:5px;
+}
+
+#statusMenu li a:hover, #cssmenu ul li:hover a{
+	color:#FFFFFF;
+}
+
+#statusMenu li ul{
+	display:none;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	border:0px;
+	position:absolute;
+	width:50px;
+	z-index:200;
+}
+#statusMenu li:hover ul {
+	display:block;
+}
+
+#statusMenu li li {
+	display:block;
+	float:none;
+	margin:0px;
+	padding:0px;
+}
+#statusMenu li ul a:hover, #cssmenu li ul li:hover a{
+	background: #468989;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+#advBar {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+	width: 500px;
+	margin-top: 5px;
+}
+
+#advBar td {
+	padding: 0px;
+}
+
+#callInfo {
+	width: 400px;
+	height: 50px;
+	float: left;
+	margin-right: 15px;
+	margin-left: 5px;
+	background: #F6F6F6;
+	background: #FAFAFA url(/includes/pictures/icon-about.png) no-repeat center;
+}
+
+#newCall {
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 13px;
+	width: 380px;
+	margin-left: 10px;
+	background: white;
+	margin-top: 5px;
+	margin-left: -500px;
+}
+
+#newCall td {
+	padding: 2px;
+}
+
+*/
+

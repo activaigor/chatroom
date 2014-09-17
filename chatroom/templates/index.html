@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Чат{% end %}
+
+{% block js%}
+	<script src="/static/js/index.js" type="text/javascript"></script>
+{% end %}
+
+{% block login_status %}
+<span>Вы вошли в систему как {{ user }}</span>
+{% end %}
+
+{% block content %}
+<div id="room_search">
+	<input type="text" name="room" value="">
+</div>
+
+<div id="room_list">
+	<div id="parrent_list">
+	{% for room in rooms %}
+	<div class="room">
+		<a href="/chat/{{ room.name }}">{{ room.name }}</a>
+	</div>
+	{% end %}
+	</div>
+	<div id="search_list" style="display: none;">
+	</div>
+	<div id="room_add">
+		<input style="display: none" type="text" name="room_add" value="" />
+		<a href="#">+</a>
+	</div>
+</div>
+{% end %}
+
+
