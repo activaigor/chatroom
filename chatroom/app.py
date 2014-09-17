@@ -34,7 +34,7 @@ class MyApplication(tornado.web.Application):
             (r"/jsonp", JsonpHandler),
             (r"/chat/(?P<room>[^/]+)", RoomsHandler),
             (r"/static/(.*)", tornado.web.StaticFileHandler,
-                {'path' : 'static/'})
+                {'path' : 'chatroom/static/'})
             #(r"/signup", RegisterHandler)
         ]
         tornado.web.Application.__init__(self, handlers, **settings)
