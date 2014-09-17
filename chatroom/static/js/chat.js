@@ -1,5 +1,5 @@
 var ws;
-var host = location.origin.replace(/^http/, 'ws') + 'chat';
+var host = location.origin.replace(/^http/, 'ws') + '/chat';
 
 $(document).ready(function(){
 	alert(host);
