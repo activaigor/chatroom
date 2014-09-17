@@ -1,5 +1,5 @@
 PORT = 5000
-TEMPLATE_DIR = 'templates'
+TEMPLATE_DIR = 'chatroom/templates'
 
 SQL = dict(
 	db_uri = 'postgres://{user}:{pasw}@{host}:{port}/{data}',
