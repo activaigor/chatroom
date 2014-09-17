@@ -3,7 +3,7 @@ var ws;
 $(document).ready(function(){
 
 	function create_ws() {
-		ws = new WebSocket("ws://127.0.0.1:5000/chat");
+		ws = new WebSocket("ws://afternoon-chamber-5695.herokuapp.com:5000/chat");
 
 		ws.onopen = function(e) {
 			send_message('hello', 'hello');
