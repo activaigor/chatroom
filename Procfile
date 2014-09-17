@@ -1,1 +1,1 @@
-web: python chatroom/app.py 5000
+web: python chatroom/app.py

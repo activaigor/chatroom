@@ -1,6 +1,7 @@
 import tornado.ioloop
 import tornado.web
 import settings
+import os
 from handlers.login import LoginHandler
 from handlers.signup import SignupHandler
 from handlers.index import IndexHandler
@@ -40,5 +41,6 @@ class MyApplication(tornado.web.Application):
 
 if __name__ == "__main__":
     myapp = MyApplication()
-    myapp.listen(settings.PORT)
+    port = int(os.environ.get('PORT', 5000))
+    myapp.listen(port)
     tornado.ioloop.IOLoop.instance().start()
