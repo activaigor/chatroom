@@ -37,7 +37,7 @@ $(document).ready(function(){
 	}
 
 	function prepare_message(data) {
-		if (data['room'] == chat_room) {
+		if (data['room'] == chat_room || data['room'] == 'all') {
 			return '<p><i>' + data['from'] + '</i>: ' + data['body'] + '</p>';
 		} else {
 			return null;

@@ -34,6 +34,10 @@ input {
 	margin-left: 10px;
 }
 
+#upper_bar a {
+	color: white;
+}
+
 #signin {
 	border: 5px solid #EFEFEF;
 	width: 200px;

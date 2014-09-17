@@ -52,9 +52,17 @@ class ChatHandler(WebSocketBaseHandler):
 
 
 	def on_close(self):
-		user = self.get_secure_cookie('user')
-		self.__del_user(user)
+		username = self.get_secure_cookie('user')
+		self.__del_user(username)
 		users.remove(self)
+		msg = {
+			'type' : 'user',
+			'from' : 'system',
+			'room' : 'all',
+			'body' : username + ' leave the chat'
+		}
+		for user in users:
+			user.write_message(json.dumps(msg))
 
 	def __del_user(self, user):
 		db = self.session
