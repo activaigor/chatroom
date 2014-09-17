@@ -2,7 +2,6 @@ var ws;
 var host = location.origin.replace(/^http/, 'ws') + '/chat';
 
 $(document).ready(function(){
-	alert(host);
 
 	function create_ws() {
 		ws = new WebSocket(host);
