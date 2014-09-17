@@ -1,4 +1,4 @@
-PORT = 5000
+PORT = 80
 TEMPLATE_DIR = 'templates'
 
 SQL = dict(
