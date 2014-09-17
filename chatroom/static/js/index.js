@@ -16,7 +16,7 @@ $(document).ready(function(){
 				data = eval('(' + data + ')');
 				if (data['success']) {
 					alert('Комната успешно добавлена');
-					$("#parrent_list").append('<div class="room"><a href="#">' + name + '</a></div>');
+					$("#parrent_list").append('<div class="room"><a href="/chat/' + name + '">' + name + '</a></div>');
 					$('#room_add').css('width','60px');
 					$('#room_add').find('input').hide();
 					$('#room_add').find('input').val('Название комнаты');
