@@ -206,6 +206,8 @@ input {
 #site_preview {
 	border: 1px solid #EFEFEF;
 	width: 70%;
+	max-height: 150px;
+	overflow: hidden;
 }
 
 #site_preview * {

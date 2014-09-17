@@ -33,7 +33,6 @@ class ChatHandler(WebSocketBaseHandler):
 				user.write_message(json.dumps(msg))
 		elif msg['type'] == 'user':
 			match = re_http.findall(msg['body'])
-			print match
 			if len(match) > 0:
 				url = str(match[0]) if str(match[0])[-1] == '/' else str(match[0]) + '/'
 				r = requests.get(url)
@@ -47,7 +46,6 @@ class ChatHandler(WebSocketBaseHandler):
 					'title' : '<h3>' + str(soup.title.string.encode('utf-8')) + '</h3>'
 				}
 				msg['body'] = '{favicon}<a href="{url}">{url}</a><div id="site_preview">{title}{body}</div>'.format(**msg_attr)
-				print msg['body']
 				message = json.dumps(msg)
 			for user in users:
 				user.write_message(message)
