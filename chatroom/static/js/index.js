@@ -38,7 +38,7 @@ $(document).ready(function(){
     	        	$("#search_list").html('');
     	        	$("#search_list").show();
     	            response($.map(data, function (item) {
-    	                $("#search_list").append('<div class="room"><a href="#">' + item + '</a></div>');
+    	                $("#search_list").append('<div class="room"><a href="/chat/' + item + '">' + item + '</a></div>');
     	            }))
     	        }
     	    })
